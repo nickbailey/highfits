@@ -274,6 +274,14 @@ def test():
     audio.close()
 
 if __name__ == "__main__":
+    import sys
+    if len(sys.argv) > 0:
+        audio = Audio()
+        print "-------------------"
+        audio.get_info()
+        print "-------------------"
+        audio.close()
+        exit(1)
     test()
     #sinePlay(None, None, None)
 
